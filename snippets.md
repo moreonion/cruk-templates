@@ -43,7 +43,7 @@ A landscape format is best suited for most screens, especially since the image w
 
 ## headings
 
-The big headline should be a "Heading 1". It's blue by default, but any part of it that's emphasized will turn pink. You don't necessarily need this snippet, choosing the heading and emphasis in the editor will have the same effect.gi
+The big headline should be a "Heading 1". It's blue by default, but any part of it that's emphasized will turn pink. You don't necessarily need this snippet, choosing the heading and marking a section as "bold" or "italic" in the editor will have the same effect.
 
 ```html
 <h1>I am big and blue <em>but this is pink</em></h1>
