@@ -19,9 +19,9 @@ $(document).ready(function(){
   // resize page to fit around a column with absolute position
   function fixColumns($col){
     if ($col.css('position') == 'absolute'){
-      var h = 60 + 52 * $col.length; // paddings
-      $col.children().each(function(){
-        h += $(this).outerHeight();
+      var h = 0;
+      $col.children().children().each(function(){
+        h += $(this).outerHeight(true);
       });
       if ($('#page').height() < h) {
         $('#page').css('min-height', h);
