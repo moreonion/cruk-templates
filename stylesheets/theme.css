@@ -1726,7 +1726,7 @@ ul.share-links .twitter span.icon {
 .big-counter {
   margin: 1.44444444rem 0;
 }
-.big-counter,
+.big-counter .t_current,
 .big-counter .odometer {
   font-size: 75px;
   line-height: 75px;
@@ -1734,6 +1734,7 @@ ul.share-links .twitter span.icon {
   font-weight: bold;
   font-style: normal;
   color: #e40085;
+  vertical-align: baseline;
 }
 .webkit-background-clip .big-counter .odometer-value {
   background: url(../images/pgbar_filling_dots.png) repeat;
@@ -1741,13 +1742,15 @@ ul.share-links .twitter span.icon {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.big-counter p {
+  font-weight: bold;
+}
 /* ---------- odometer theme ---------------------------------------- */
 .odometer.odometer-auto-theme,
 .odometer.odometer-theme-default {
   display: -moz-inline-box;
   -moz-box-orient: vertical;
   display: inline-block;
-  vertical-align: middle;
   *vertical-align: auto;
   position: relative;
 }
