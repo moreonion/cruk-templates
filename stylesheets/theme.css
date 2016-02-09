@@ -1156,6 +1156,7 @@ textarea:focus {
 }
 textarea,
 .eaMessagecontent,
+.eaMessageSubjectContainer input,
 .eaSwitchSubjectContainer input,
 .eaSwitchTemplateContainer input {
   font-size: 100%;
@@ -1511,26 +1512,14 @@ label,
 }
 /* ---------- Multiple contact tabbed list--------------------------- */
 /* container for a contact */
-.eaContactContainer {
-  float: left;
-  width: 98%;
-  position: relative;
-  padding-left: 5px;
-  margin-bottom: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border: 1px solid #e3e3e3;
-  background-color: #fff;
-}
 /* container for a contact's detail */
 .eaContactDetailContainer {
-  float: left;
-  width: 98%;
-  position: relative;
-  padding-top: 10px;
-  padding-left: 5px;
-  clear: left;
-  margin-top: 10px;
+  margin-top: 1.44444444rem;
+}
+.contactTabContent {
+  position: static;
+  float: none;
+  width: auto;
 }
 /* container for a contact's issue comments */
 .eaContactCommentContainer {
@@ -1569,9 +1558,9 @@ label,
   padding-left: 0px;
 }
 .contactTabContent {
-  padding-left: 5px;
-  padding-bottom: 5px;
-  width: 95%;
+  position: static!important;
+  float: none!important;
+  width: auto!important;
 }
 /* ---------- images ------------------------------------------------ */
 .ea-contact-bio-image {
