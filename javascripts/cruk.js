@@ -105,13 +105,24 @@ $(document).ready(function(){
     }
   });
 
-  // add class #eaerrors if empty
-  $(window).on('load DOMSubtreeModified', '#eaerrors', function(e) {
+  // remove #eaerrors if empty
+  $(window).on('DOMSubtreeModified', '#eaerrors', function(e) {
     var self = $(e.target);
     if (self.text().trim() == "") {
-      self.addClass('empty');
+      self.hide();
     } else {
-      self.removeClass('empty');
+      self.show();
+    }
+  });
+
+// ---------- undo EN contact list formatting -----------------------
+
+  $('.eaContactNameContainer').each(function(){
+    var $checkbox = $(this).children('.eaContactSelectCheckbox');
+    if ($checkbox.length) {
+      // keep checkbox + label, remove node text + &nbsp;
+      $(this).addClass('has-checkbox').wrapInner('<div class="remove"></div>');
+      $('.remove', this).replaceWith($checkbox);
     }
   });
 
@@ -149,3 +160,17 @@ $(document).ready(function(){
   });
 
 });
+
+// ---------- counter animation -------------------------------------
+
+// test if we have -webkit-background-clip support
+if (typeof document.body.style.webkitBackgroundClip !== 'undefined') {
+  $('html').addClass('webkit-background-clip');
+}
+
+// odometer options, have to be set before loading odometer.js
+window.odometerOptions = {
+  selector: '.t_current',
+  format: '(ddd)',
+  count: 0
+}

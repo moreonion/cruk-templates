@@ -641,6 +641,7 @@ td {
     bottom: 0;
     z-index: -2;
     margin: 0;
+    background-color: #f1f1f1;
   }
 }
 @media screen and (min-width: 780px) and (orientation: landscape) {
@@ -716,16 +717,15 @@ a,
 a:link,
 a:visited {
   color: #2e008b;
-  font-weight: bold;
+  font-weight: normal;
   font-style: normal;
-  text-decoration: none;
+  text-decoration: underline;
   outline: none;
   cursor: pointer;
 }
 a:hover,
 a:focus {
   color: #e40085;
-  text-decoration: underline;
   outline: none;
 }
 a:active {
@@ -868,6 +868,73 @@ h6 {
   width: 100%;
   height: 100%;
 }
+/* ---------- utility classes --------------------------------------- */
+@media screen and (max-width: 779px) {
+  .hide-on-mobile,
+  .desktop-only {
+    display: none!important;
+  }
+}
+@media screen and (min-width: 780px) {
+  .hide-on-desktop,
+  .mobile-only {
+    display: none!important;
+  }
+}
+@media screen and (min-width: 780px) {
+  #page.classic .en_right_wrapper .line-before:before {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #f8f8f8;
+    margin-top: 0.72222222rem;
+    margin-bottom: 1.44444444rem;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    padding: 0 1.5rem;
+  }
+}
+@media screen and (min-width: 1050px) {
+  #page.classic .en_right_wrapper .line-before:before {
+    margin-left: -2.5rem;
+    margin-right: -2.5rem;
+    padding: 0 2.5rem;
+  }
+}
+@media screen and (min-width: 1600px) {
+  #page.classic .en_right_wrapper .line-before:before {
+    margin-right: -1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+@media screen and (min-width: 780px) {
+  #page.classic .en_right_wrapper .line-after:after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #f8f8f8;
+    margin-top: 0.72222222rem;
+    margin-bottom: 1.44444444rem;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    padding: 0 1.5rem;
+  }
+}
+@media screen and (min-width: 1050px) {
+  #page.classic .en_right_wrapper .line-after:after {
+    margin-left: -2.5rem;
+    margin-right: -2.5rem;
+    padding: 0 2.5rem;
+  }
+}
+@media screen and (min-width: 1600px) {
+  #page.classic .en_right_wrapper .line-after:after {
+    margin-right: -1.5rem;
+    padding-right: 1.5rem;
+  }
+}
 /* ==================================================================
  * top to bottom styling
  * ================================================================== */
@@ -875,6 +942,7 @@ h6 {
 #header .logo {
   display: block;
   width: 220px;
+  overflow: hidden;
 }
 @media screen and (min-width: 1050px) {
   #page.classic #header .logo {
@@ -901,8 +969,12 @@ h6 {
 #footer .menu a {
   display: block;
   color: #9e9e9e;
-  font-weight: normal;
+  text-decoration: none;
   padding: 0.5em 1em;
+}
+#footer .menu a:hover,
+#footer .menu a:focus {
+  text-decoration: underline;
 }
 #footer .menu a:active {
   color: #919191;
@@ -977,12 +1049,13 @@ a.button,
   font-size: 1.55555556rem;
   line-height: 1.85714286em;
   margin-bottom: 0.92857143em;
+  line-height: 1.15em;
   font-family: "museo-sans-rounded", Arial, sans;
   font-weight: 800;
   font-style: normal;
   display: block;
   width: 100%;
-  padding: .5em 1.5em;
+  padding: .86em 1.5em;
   color: #ffffff;
   text-decoration: none;
   white-space: normal;
@@ -1026,6 +1099,7 @@ input[type="submit"],
   background-position: 98%;
   -webkit-transition: background-position 300ms ease-out;
   transition: background-position 300ms ease-out;
+  padding-right: 2.5em;
 }
 input[type="submit"]:hover,
 .eaSubmitButton:hover,
@@ -1081,13 +1155,15 @@ textarea:focus {
   outline: none;
 }
 textarea,
-.eaMessagecontent {
-  font-size: 100%;
-  min-height: 15em;
-}
+.eaMessagecontent,
 .eaSwitchSubjectContainer input,
 .eaSwitchTemplateContainer input {
   font-size: 100%;
+  padding: 1em 0.75em;
+}
+textarea,
+.eaMessagecontent {
+  min-height: 15em;
 }
 .eaMessageSignoffContainer {
   display: none;
@@ -1370,82 +1446,68 @@ label,
 /* ==================================================================
  * contact lists
  * ================================================================== */
+.eaRecipientBlock,
+.eaSenderBlock {
+  margin-top: 0.72222222rem;
+  margin-bottom: 1.44444444rem;
+}
+.eaRecipientBlock br:first-child,
+.eaSenderBlock br:first-child {
+  display: none;
+}
 /* ---------- contact ----------------------------------------------- */
 /* select contact instruction text */
+.eaSelectContactInstruction {
+  display: block;
+  margin-top: 1.44444444rem;
+}
 /* container for contacts */
 .eaContactsContainer {
-  float: left;
-  width: 95%;
-  position: relative;
-  padding: 10px;
-  background-color: #ffffff;
-  margin-top: 10px;
+  margin-bottom: 1.44444444rem;
 }
 /* contact name container */
 .eaContactNameContainer {
-  float: left;
-  position: relative;
-  clear: left;
   font-family: Arial, sans;
   font-weight: bold;
   font-style: normal;
-  padding-right: 10px;
-  width: 48%;
-  height: 25px;
+  margin-top: 0.48148148rem;
 }
 /* contact organization container */
-.eaContactOrgContainer {
-  float: left;
-  width: 48%;
-  position: relative;
+.eaContactNameContainer.has-checkbox + .eaContactOrgContainer {
+  margin-left: 48px;
+  margin-top: -0.72222222rem;
 }
 /* contact biographyLink container */
 .eaContactBiographyLinkContainer {
-  float: left;
   position: relative;
   font-family: Arial, sans;
   font-weight: bold;
   font-style: normal;
-  height: 25px;
   padding-top: 4px;
-  width: 125px;
 }
 /* contact biography container */
 .eaContactBiographyContainer {
-  float: left;
   position: relative;
-  width: 90%;
-  clear: left;
-  padding-left: 0;
   padding-right: 0;
 }
 /* contact biography list */
 .eaContactBiographyList {
-  float: left;
   position: relative;
-  width: 350px;
   margin-top: 20px;
 }
 /* contact biography line container */
 .eaContactBiographyLineContainer {
-  clear: left;
   padding-left: 0px;
   padding-bottom: 5px;
   list-style-type: disc;
 }
 .eaContactBiographyPictureContainer {
-  float: left;
   position: relative;
   width: 125px;
 }
 /* contact select checkbox */
-.eaContactSelectCheckbox {
-  color: #666666;
-  border-top-style: none;
-  border-right-style: none;
-  border-bottom-style: none;
-  border-left-style: none;
-  margin-right: 5px;
+.eaContactSelectCheckbox label {
+  position: static!important;
 }
 /* ---------- Multiple contact tabbed list--------------------------- */
 /* container for a contact */
@@ -1613,3 +1675,184 @@ ul.share-links .twitter span.icon {
   line-height: 0;
   height: 0;
 }
+/* ==================================================================
+ * counter
+ * ================================================================== */
+/* ---------- progress bar ------------------------------------------ */
+.pgbar-thermometer {
+  display: block;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 1.44444444rem 0;
+}
+.pgbar-thermometer .t_body {
+  border: none;
+  height: 40px;
+  position: relative;
+  overflow: hidden;
+  background-color: #e3e3e3;
+  margin-bottom: 0.48148148rem;
+  -webkit-border-radius: 0.4rem;
+  border-radius: 0.4rem;
+}
+.pgbar-thermometer .t_level {
+  width: 0%;
+  height: 40px;
+  min-width: 6px;
+  float: left;
+  overflow: hidden;
+  margin: 0;
+  background: url(../images/pgbar_filling_dots.png) no-repeat center right #e40085;
+  -webkit-transition: width 500ms ease;
+  transition: width 500ms ease;
+}
+.pgbar-thermometer .t_current {
+  float: left;
+}
+.pgbar-thermometer .t_target {
+  float: right;
+}
+.pgbar-thermometer p {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.pgbar-thermometer p .t_current,
+.pgbar-thermometer p .t_target {
+  float: none;
+}
+/* ---------- big counter ------------------------------------------- */
+.big-counter {
+  margin: 1.44444444rem 0;
+}
+.big-counter,
+.big-counter .odometer {
+  font-size: 75px;
+  line-height: 75px;
+  font-family: Arial, sans;
+  font-weight: bold;
+  font-style: normal;
+  color: #e40085;
+}
+.webkit-background-clip .big-counter .odometer-value {
+  background: url(../images/pgbar_filling_dots.png) repeat;
+  color: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* ---------- odometer theme ---------------------------------------- */
+.odometer.odometer-auto-theme,
+.odometer.odometer-theme-default {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  position: relative;
+}
+.odometer.odometer-auto-theme,
+.odometer.odometer-theme-default {
+  *display: inline;
+}
+.odometer.odometer-auto-theme .odometer-digit,
+.odometer.odometer-theme-default .odometer-digit {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  position: relative;
+}
+.odometer.odometer-auto-theme .odometer-digit,
+.odometer.odometer-theme-default .odometer-digit {
+  *display: inline;
+}
+.odometer.odometer-auto-theme .odometer-digit .odometer-digit-spacer,
+.odometer.odometer-theme-default .odometer-digit .odometer-digit-spacer {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  visibility: hidden;
+}
+.odometer.odometer-auto-theme .odometer-digit .odometer-digit-spacer,
+.odometer.odometer-theme-default .odometer-digit .odometer-digit-spacer {
+  *display: inline;
+}
+.odometer.odometer-auto-theme .odometer-digit .odometer-digit-inner,
+.odometer.odometer-theme-default .odometer-digit .odometer-digit-inner {
+  text-align: left;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+.odometer.odometer-auto-theme .odometer-digit .odometer-ribbon,
+.odometer.odometer-theme-default .odometer-digit .odometer-ribbon {
+  display: block;
+}
+.odometer.odometer-auto-theme .odometer-digit .odometer-ribbon-inner,
+.odometer.odometer-theme-default .odometer-digit .odometer-ribbon-inner {
+  display: block;
+  -webkit-backface-visibility: hidden;
+}
+.odometer.odometer-auto-theme .odometer-digit .odometer-value,
+.odometer.odometer-theme-default .odometer-digit .odometer-value {
+  display: block;
+  -webkit-transform: translateZ(0);
+}
+.odometer.odometer-auto-theme .odometer-digit .odometer-value.odometer-last-value,
+.odometer.odometer-theme-default .odometer-digit .odometer-value.odometer-last-value {
+  position: absolute;
+}
+.odometer.odometer-auto-theme.odometer-animating-up .odometer-ribbon-inner,
+.odometer.odometer-theme-default.odometer-animating-up .odometer-ribbon-inner {
+  -webkit-transition: -webkit-transform 2s;
+  -moz-transition: -moz-transform 2s;
+  -ms-transition: -ms-transform 2s;
+  -o-transition: -o-transform 2s;
+  transition: transform 2s;
+}
+.odometer.odometer-auto-theme.odometer-animating-up.odometer-animating .odometer-ribbon-inner,
+.odometer.odometer-theme-default.odometer-animating-up.odometer-animating .odometer-ribbon-inner {
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+.odometer.odometer-auto-theme.odometer-animating-down .odometer-ribbon-inner,
+.odometer.odometer-theme-default.odometer-animating-down .odometer-ribbon-inner {
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+.odometer.odometer-auto-theme.odometer-animating-down.odometer-animating .odometer-ribbon-inner,
+.odometer.odometer-theme-default.odometer-animating-down.odometer-animating .odometer-ribbon-inner {
+  -webkit-transition: -webkit-transform 2s;
+  -moz-transition: -moz-transform 2s;
+  -ms-transition: -ms-transform 2s;
+  -o-transition: -o-transform 2s;
+  transition: transform 2s;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+/*
+.odometer.odometer-auto-theme, .odometer.odometer-theme-default {
+  font-family: "Helvetica Neue", sans-serif;
+  line-height: 1.1em;
+}
+.odometer.odometer-auto-theme .odometer-value, .odometer.odometer-theme-default .odometer-value {
+  text-align: center;
+}
+*/

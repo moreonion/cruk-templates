@@ -87,19 +87,35 @@ This adds some footer links. Past this snippet to a copy box to add a footer to 
 
 Replace the `{{placeholders}}` with the real links. Please do not add more than 2-4 items, or the menu will get to big for some screen sizes.
 
-## progress bar
+## big counter
+
+Add this snippet to a copy box to display a big counter. The number will be updated automatically.
 
 ```html
-<div class="pgbar-thermometer" data-target="250" data-start="0">
+<div class="big-counter line-after">
+  <span class="t_current">0</span>
+</div>
+```
+
+## progress bar
+
+To display the counter as progress bar, use this snippet:
+
+```html
+<div class="pgbar-thermometer line-after" data-target="250" data-start="0">
+  <p><span class="t_current">0</span> people have taken action already</p>
   <div class="t_body">
-    <div class="t_level">
-      <span class="t_current">0</span>
-    </div>
+    <div class="t_level"></div>
+  </div>
+  <div class="clearfix">
+    <span class="t_current">0</span><span class="t_target">0</span>
   </div>
 </div>
 ```
 
-Change the value of data-target according to your needs. Change data-start to add an initial value for the progress bar, e.g. offline supporters. If the data-attributes are missing, the default values shown above will be used instead.
+Feel free to replace the default copy with a text of your own! The numbers for `.t_current` and `.t_target` will be updated automatically.
+
+To set a new target, change the value for `data-target`. Change `data-start` to add an initial value for the progress bar, e.g. offline supporters. If the data-attributes are missing, the default values shown above will be used instead.
 
 Unfortunately, this is a little tricky because the EN editor keeps deleting all data-tags. To save them, you'll have to disable the editor first by clicking the top left x-button. Feel very welcome to complain to Engaging Networks about it!
 
@@ -138,5 +154,29 @@ Make sure to replace the `{{placeholder parts}}` with the real urls and share te
 Place this snippet on the thank you page to track submissions (it's hidden so it doesn't matter if it is inside a wrapper or not):
 
 ```html
-  <input type="hidden" name="track-submission" value="1">
+<input type="hidden" name="track-submission" value="1">
 ```
+
+## show/hide stuff depending on screen size
+
+If you want some elements to show up on a certain screen size only, you may add any of the following classes: "mobile-only", "desktop-only", "hide-on-mobile", "hide-on-desktop".
+
+Let's say you want to add a copy block to desktop size screens that would be too distracting on mobile devices, then you can wrap it in a container to display on desktop only (hide-on-mobile would have the same effect):
+
+```html
+<div class="desktop-only">
+  copy block that's just too much for mobile
+</div>
+```
+
+## separating lines in right column
+
+To add a white line for visually separating content elements, just give them the class "line-before" or "line-after", depending on where the line should be.
+
+```html
+<div class="line-after">
+  some content with a white line below it
+</div>
+```
+
+This will only work on elements with grey background (= right column when using the "two-column-layout" on larger screens), otherwise the class is going to be ignored.
