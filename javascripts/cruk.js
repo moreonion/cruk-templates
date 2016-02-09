@@ -50,16 +50,18 @@ $(document).ready(function(){
 
 // ---------- "show more" toggle ------------------------------------
 
-  $('#background-info').css('display', 'none');
-  $('.info-toggle').on('click', function(e) {
-    var $toggle = $(this);
-    var $target = $('#background-info');
-    if ($target.length > 0) {
+  var $toggle =  $('.info-toggle');
+  var $target =  $($toggle.attr('href'));
+
+  if ($toggle.is(':visible') && $target.length) {
+    $target.css('display', 'none');
+    $toggle.on('click', function(e) {
       $target.slideDown();
       $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
-    }
-    e.preventDefault();
-  });
+      e.preventDefault();
+    });
+  }
+
 // ---------- fancy forms -------------------------------------------
 
   // enable Picker and Selector
@@ -129,7 +131,7 @@ $(document).ready(function(){
 // ---------- progress bar ------------------------------------------
 
   // configure progressbar = thermometer = counter
-  var $thermometerEl = $('.pgbar-thermometer');
+  var $thermometerEl = $('.pgbar-thermometer, .big-counter');
   var thermometerTarget = 250; // default
   var thermometerStart = 0; // default
 
