@@ -1,0 +1,203 @@
+/* ---------- boilerplate ------------------------------------------- */
+
+body {
+  line-height: 1.44444444em;
+}
+blockquote, hr, ul, ol {
+  margin: 1.44444444em 0;
+}
+
+/* ---------- layout ------------------------------------------------ */
+
+#page {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 1.44444444em;
+}
+.wrapper.middle {
+  width: 90%;
+  max-width: 1200px;
+}
+
+.twocolumn #page.classic {
+  overflow: hidden;
+  position: relative;
+}
+.twocolumn #page.classic #main {
+  position: static;
+}
+.twocolumn #page.classic .en_left_wrapper {
+  width: 55%;
+}
+.twocolumn #page.classic .en_right_wrapper {
+  width: 40%;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+  padding-top: 2.44444444em;
+  position: absolute;
+  right: 0;
+  top: 1em;
+  bottom: -1em;
+  padding-bottom: 2.44444444em;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #f1f1f1;
+  box-shadow: 0 0 4px #bbb inset;
+}
+
+.onecolumn #page.classic {
+  width: 60%;
+}
+.onecolumn #page.classic .middle {
+  width: 100%;
+}
+.onecolumn #page.classic #main {
+  background-color: #f1f1f1;
+  box-shadow: 0 0 4px #bbb inset;
+  padding: 1.44444444em 4em 1.44444444em 3.5em;
+  min-height: 75vh;
+  margin-top: 1.44444444em;
+}
+
+#page.big-pic {
+  width: 30em;
+  padding-left: 2.5em;
+  padding-right: 3em;
+}
+.big-pic #background-image,
+.big-pic .background-image {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+  margin: 0;
+  background-color: #f1f1f1;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+}
+
+/* ---------- styling ----------------------------------------------- */
+
+p,
+ul,
+ol,
+li {
+  margin-bottom: 1.44444444em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 26px;
+}
+.classic h1 {
+  font-size: 4.33333333em;
+  line-height: 1em;
+  margin-bottom: 0.66666666em;
+  margin-top: 0.666666666em;
+}
+
+.hide-on-desktop,
+.mobile-only {
+  display: none!important;
+}
+.video,
+.youtube,
+.vimeo,
+#background-image,
+.background-image {
+  margin-bottom: 1.44444444em;
+}
+
+#footer .menu {
+  margin-left: -1em;
+  margin-right: -1em;
+}
+#footer .menu li {
+  display: inline;
+  border-left: 1px solid #9e9e9e;
+}
+#footer .menu a {
+  display: inline-block;
+}
+#footer .menu li:first-child {
+  border-left: none;
+}
+#page.big-pic #footer,
+.twocolumn #page.classic #footer {
+  min-height: 4.33333333em;
+}
+#page.big-pic #footer .menu,
+.twocolumn #page.classic #footer .menu {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 1.44444444em;
+}
+.onecolumn #page.classic #footer {
+  width: 100%;
+  padding-left: 3.5em;
+  padding-right: 4em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+textarea,
+select,
+.selecter .selecter-selected,
+.eaFormRadio,
+.eaFormCheckbox,
+.eaQuestionRadioFormFieldContainer,
+.eaQuestionCheckboxFormFieldContainer {
+  margin-bottom: 13px;
+}
+label,
+.eaFormElementLabel,
+.eaQuestionLabel,
+.picker .picker-label {
+  margin-bottom: 0.3em;
+}
+.validationError .eaErrorMessage {
+  padding: 0.72222222em 10px 5px;
+  margin-top: -1.44444444em;
+  margin-bottom: 0.72222222em;
+}
+#eaerrors {
+  padding: 13px 3%;
+  margin-bottom: 26px;
+}
+.eaRecipientBlock,
+.eaSenderBlock {
+  margin-top: 0.72222222em;
+  margin-bottom: 1.44444444em;
+}
+.eaSelectContactInstruction {
+  margin-top: 1.44444444em;
+}
+.eaContactsContainer {
+  margin-bottom: 1.44444444em;
+}
+.eaContactNameContainer {
+  margin-top: 0.48148148em;
+}
+.eaContactNameContainer.has-checkbox + .eaContactOrgContainer {
+  margin-top: -0.72222222em;
+}
+.pgbar-thermometer, .big-counter {
+  margin: 1.44444444em 0;
+}
+.pgbar-thermometer .t_body {
+  margin-bottom: 0.48148148em;
+}
+.pgbar-thermometer p {
+  margin-bottom: 1em;
+}
