@@ -87,19 +87,18 @@ This adds some footer links. Past this snippet to a copy box to add a footer to 
 
 Replace the `{{placeholders}}` with the real links. Please do not add more than 2-4 items, or the menu will get to big for some screen sizes.
 
-## big counter
+## counter and progress bar (thermometer)
 
-Add this snippet to a copy box to display a big counter. The number will be updated automatically.
+Add this snippet to a copy box to display a big counter.
 
 ```html
-<div class="big-counter line-after">
+<div class="big-counter line-after" data-start="0">
   <span class="t_current">0</span>
+  <p>people have taken action already</p>
 </div>
 ```
 
-## progress bar
-
-To display the counter as progress bar, use this snippet:
+To display the counter as a progress bar, use this snippet:
 
 ```html
 <div class="pgbar-thermometer line-after" data-target="250" data-start="0">
@@ -108,16 +107,16 @@ To display the counter as progress bar, use this snippet:
     <div class="t_level"></div>
   </div>
   <div class="clearfix">
-    <span class="t_current">0</span><span class="t_target">0</span>
+    <span class="t_target">0</span>
   </div>
 </div>
 ```
 
 Feel free to replace the default copy with a text of your own! The numbers for `.t_current` and `.t_target` will be updated automatically.
 
-To set a new target, change the value for `data-target`. Change `data-start` to add an initial value for the progress bar, e.g. offline supporters. If the data-attributes are missing, the default values shown above will be used instead.
+To set a new target, change the value for `data-target`. Change `data-start` to add an initial value, e.g. offline supporters. If the data-attributes are missing, the default values shown above will be used instead.
 
-Unfortunately, this is a little tricky because the EN editor keeps deleting all data-tags. To save them, you'll have to disable the editor first by clicking the top left x-button. Feel very welcome to complain to Engaging Networks about it!
+Unfortunately, this is a little tricky because the EN editor keeps deleting all data-tags. To save them, you'll have to disable the editor by clicking the top left x-button.
 
 ## share links
 
