@@ -113,6 +113,10 @@ h6 {
 .background-image {
   margin-bottom: 1.44444444em;
 }
+#background-image img,
+.background-image img {
+  width: 100%;
+}
 
 #footer .menu {
   margin-left: -1em;
