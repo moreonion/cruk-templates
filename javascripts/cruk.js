@@ -122,8 +122,12 @@ $(document).ready(function(){
   $('.eaContactNameContainer').each(function(){
     var $checkbox = $(this).children('.eaContactSelectCheckbox');
     if ($checkbox.length) {
-      // keep checkbox + label, remove node text + &nbsp;
+      // keep checkbox + label, remove node text + &nbsp;s but not links
+      var $link = $(this).children('a')
       $(this).addClass('has-checkbox').wrapInner('<div class="remove"></div>');
+      if ($link.length){
+        $('label', this).text('').append($link);
+      }
       $('.remove', this).replaceWith($checkbox);
     }
   });

@@ -179,6 +179,7 @@ label,
   padding: 13px 3%;
   margin-bottom: 26px;
 }
+
 .eaRecipientBlock,
 .eaSenderBlock {
   margin-top: 0.72222222em;
@@ -193,9 +194,23 @@ label,
 .eaContactNameContainer {
   margin-top: 0.48148148em;
 }
-.eaContactNameContainer.has-checkbox + .eaContactOrgContainer {
+.eaContactNameContainer.has-checkbox + .eaContactOrgContainer,
+.eaContactNameContainer.has-checkbox + .eaContactPositionContainer,
+.eaContactNameContainer.has-checkbox + .eaContctPartyContainer {
   margin-top: -0.72222222em;
 }
+.eaContactDetailContainer {
+  margin-top:  0.72222222em;
+  margin-bottom: 1.44444444em;
+}
+.twocolumn #page.classic .en_right_wrapper .contactTabContent,
+.onecolumn #page.classic .contactTabContent {
+  background-color: #ffffff !important;
+}
+.onecolumn #page.classic .eaContactDetailContainer {
+  margin-left: 46px;
+}
+
 .pgbar-thermometer, .big-counter {
   margin: 1.44444444em 0;
 }

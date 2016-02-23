@@ -1474,8 +1474,14 @@ label,
   margin-top: 0.48148148rem;
 }
 /* contact organization container */
-.eaContactNameContainer.has-checkbox + .eaContactOrgContainer {
+.eaContactNameContainer.has-checkbox ~ .eaContactOrgContainer,
+.eaContactNameContainer.has-checkbox ~ .eaContactPositionContainer,
+.eaContactNameContainer.has-checkbox ~ .eaContactPartyContainer {
   margin-left: 48px;
+}
+.eaContactNameContainer.has-checkbox + .eaContactOrgContainer,
+.eaContactNameContainer.has-checkbox + .eaContactPositionContainer,
+.eaContactNameContainer.has-checkbox + .eaContctPartyContainer {
   margin-top: -0.72222222rem;
 }
 /* contact biographyLink container */
@@ -1514,53 +1520,59 @@ label,
 /* container for a contact */
 /* container for a contact's detail */
 .eaContactDetailContainer {
-  margin-top: 1.44444444rem;
-}
-.contactTabContent {
-  position: static;
-  float: none;
-  width: auto;
+  margin-top: 0.48148148rem;
+  margin-bottom: 1.44444444rem;
 }
 /* container for a contact's issue comments */
 .eaContactCommentContainer {
   position: relative;
-  float: left;
-  clear: left;
   margin-left: 0px;
-  width: 98%;
   padding-top: 10px;
   padding-left: 10px;
   border: 1px solid #bfbfbf;
-  height: 200px;
   overflow: auto;
 }
 /* contact issue status icon container */
 .eaContactIssueStatusContainer {
   position: relative;
-  float: right;
   padding-right: 10px;
 }
-/* contact party container */
-.eaContactPartyContainer {
-  float: left;
-  clear: both;
-  margin-left: 200px;
-  width: 200px;
-  top: -10px;
-  position: relative;
-  padding-left: 10px;
+.eaContactTabsContainer,
+.eaContactTabs,
+.contactTabContent {
+  float: none!important;
 }
-/* contact position container */
-.eaContactPositionContainer {
-  float: left;
-  width: 50%;
-  position: relative;
-  padding-left: 0px;
+.eaContactTabs {
+  margin-bottom: 15px;
+}
+.eaContactTabs a {
+  border: 2px solid #e3e3e3;
+  -webkit-border-radius: 0.5rem 0.5rem 0 0;
+  border-radius: 0.5rem 0.5rem 0 0;
+  background-color: #ffffff;
+}
+.currentContactTabLink {
+  padding-bottom: 2px;
 }
 .contactTabContent {
-  position: static!important;
-  float: none!important;
+  padding: 10px!important;
   width: auto!important;
+  background-color: #f1f1f1 !important;
+}
+@media screen and (min-width: 780px) {
+  .twocolumn #page.classic .en_right_wrapper .contactTabContent {
+    background-color: #ffffff !important;
+  }
+}
+@media screen and (min-width: 780px) {
+  .onecolumn #page.classic .eaContactDetailContainer {
+    margin-left: 46px;
+  }
+}
+@media screen and (min-width: 1050px) {
+  .onecolumn #page.classic .contactTabContent {
+    background-color: #ffffff !important;
+  }
 }
 /* ---------- images ------------------------------------------------ */
 .ea-contact-bio-image {
