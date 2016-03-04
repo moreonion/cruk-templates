@@ -1860,3 +1860,180 @@ ul.share-links .twitter span.icon {
   text-align: center;
 }
 */
+/* ==================================================================
+ * Actionpanel widgets
+ * ================================================================== */
+/* ---------- recent supporters ------------------------------------- */
+#actionpanel-supporters {
+  margin-top: 1.44444444rem;
+  margin-bottom: 1.44444444rem;
+}
+#actionpanel-supporters h2,
+#actionpanel-supporters h3 {
+  margin-bottom: 0.72222222rem;
+}
+#actionpanel-supporters .actionpanel-widget {
+  padding: 0;
+  background-color: transparent;
+}
+#actionpanel-supporters .actionpanel-widget-supporters-supporter {
+  overflow: auto;
+  background: url(../images/pen_icon.png) no-repeat -6px 0;
+  text-indent: 40px;
+}
+#actionpanel-supporters .actionpanel-widget-supporters-supporter:first-child {
+  background-position: -6px 0.5em;
+}
+#actionpanel-supporters .actionpanel-widget-supporters-name {
+  font-weight: normal;
+  color: #5A5A5A;
+}
+#actionpanel-supporters .actionpanel-widget-supporters-time {
+  float: right;
+  color: #5A5A5A;
+  position: static;
+  display: inline-block;
+  margin: 0.2em 0 -0.2em 1em;
+  text-indent: 0;
+}
+#actionpanel-supporters .actionpanel-widget-supporters-flag {
+  margin-left: -40px;
+  margin-right: 0.5em;
+}
+@media screen and (min-width: 780px) {
+  #page.classic .en_right_wrapper #actionpanel-supporters .actionpanel-widget-supporters-supporter:after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #f8f8f8;
+    margin-top: 0.72222222rem;
+    margin-bottom: 1.44444444rem;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    padding: 0 1.5rem;
+  }
+}
+@media screen and (min-width: 1050px) {
+  #page.classic .en_right_wrapper #actionpanel-supporters .actionpanel-widget-supporters-supporter:after {
+    margin-left: -2.5rem;
+    margin-right: -2.5rem;
+    padding: 0 2.5rem;
+  }
+}
+@media screen and (min-width: 1600px) {
+  #page.classic .en_right_wrapper #actionpanel-supporters .actionpanel-widget-supporters-supporter:after {
+    margin-right: -1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+@media screen and (min-width: 780px) {
+  #page.classic .en_right_wrapper #actionpanel-supporters .actionpanel-widget-supporters-supporter:first-child:before {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #f8f8f8;
+    margin-top: 0.72222222rem;
+    margin-bottom: 1.44444444rem;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    padding: 0 1.5rem;
+  }
+}
+@media screen and (min-width: 1050px) {
+  #page.classic .en_right_wrapper #actionpanel-supporters .actionpanel-widget-supporters-supporter:first-child:before {
+    margin-left: -2.5rem;
+    margin-right: -2.5rem;
+    padding: 0 2.5rem;
+  }
+}
+@media screen and (min-width: 1600px) {
+  #page.classic .en_right_wrapper #actionpanel-supporters .actionpanel-widget-supporters-supporter:first-child:before {
+    margin-right: -1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+@media screen and (min-width: 780px) {
+  #page.classic .en_right_wrapper #actionpanel-supporters .actionpanel-widget-supporters-supporter {
+    overflow: unset;
+    padding-top: 0;
+    padding-bottom: 0;
+    border: none;
+    background-position: -6px -0.3em;
+  }
+  #page.classic .en_right_wrapper #actionpanel-supporters .actionpanel-widget-supporters-supporter:after {
+    margin-bottom: 0.72222222rem !important;
+    overflow: auto;
+  }
+  #page.classic .en_right_wrapper #actionpanel-supporters .actionpanel-widget-supporters-supporter:first-child {
+    border: none;
+    background-position: -6px 0.55em;
+  }
+  #page.classic .en_right_wrapper #actionpanel-supporters .actionpanel-widget-supporters-supporter:first-child:before {
+    margin-bottom: 0.72222222rem !important;
+  }
+  #page.classic .en_right_wrapper #actionpanel-supporters .actionpanel-widget-supporters-supporter:first-child .actionpanel-widget-supporters-name {
+    padding-left: 40px;
+  }
+  #page.classic .en_right_wrapper #actionpanel-supporters .actionpanel-widget-supporters-supporter:first-child .actionpanel-widget-supporters-flag {
+    margin-left: 0;
+  }
+  #page.classic .en_right_wrapper #actionpanel-supporters .actionpanel-widget-supporters-supporter:first-child .actionpanel-widget-supporters-flag + .actionpanel-widget-supporters-name {
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: 780px) and screen and (min-width: 780px) {
+  #page.classic .en_right_wrapper #actionpanel-supporters .actionpanel-widget-supporters-supporter:after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #f8f8f8;
+    margin-top: 0.72222222rem;
+    margin-bottom: 1.44444444rem;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    padding: 0 1.5rem;
+  }
+}
+@media screen and (min-width: 780px) and screen and (min-width: 1050px) {
+  #page.classic .en_right_wrapper #actionpanel-supporters .actionpanel-widget-supporters-supporter:after {
+    margin-left: -2.5rem;
+    margin-right: -2.5rem;
+    padding: 0 2.5rem;
+  }
+}
+@media screen and (min-width: 780px) and screen and (min-width: 1600px) {
+  #page.classic .en_right_wrapper #actionpanel-supporters .actionpanel-widget-supporters-supporter:after {
+    margin-right: -1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+@media screen and (min-width: 780px) and screen and (min-width: 780px) {
+  #page.classic .en_right_wrapper #actionpanel-supporters .actionpanel-widget-supporters-supporter:first-child:before {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #f8f8f8;
+    margin-top: 0.72222222rem;
+    margin-bottom: 1.44444444rem;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    padding: 0 1.5rem;
+  }
+}
+@media screen and (min-width: 780px) and screen and (min-width: 1050px) {
+  #page.classic .en_right_wrapper #actionpanel-supporters .actionpanel-widget-supporters-supporter:first-child:before {
+    margin-left: -2.5rem;
+    margin-right: -2.5rem;
+    padding: 0 2.5rem;
+  }
+}
+@media screen and (min-width: 780px) and screen and (min-width: 1600px) {
+  #page.classic .en_right_wrapper #actionpanel-supporters .actionpanel-widget-supporters-supporter:first-child:before {
+    margin-right: -1.5rem;
+    padding-right: 1.5rem;
+  }
+}

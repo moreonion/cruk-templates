@@ -179,3 +179,14 @@ To add a white line for visually separating content elements, just give them the
 ```
 
 This will only work on elements with grey background (= right column when using the "two-column-layout" on larger screens), otherwise the class is going to be ignored.
+
+## Actionpanel: recent supporters
+
+```html
+<div id="actionpanel-supporters">
+  <h3>Who is taking action?</h3>
+  Paste your Actionpanel snippet here
+</div>
+```
+
+This will give the Actionpanel supporters widget the right look and position below the submit button. Of course you can change the heading or leave it out entirely.

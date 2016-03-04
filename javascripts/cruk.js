@@ -43,10 +43,13 @@ $(document).ready(function(){
     });
   }
 
+// ---------- move recent supporters below submit button ------------
+
+  $('.eaSubmitResetButtonGroup').after($('#actionpanel-supporters'));
+
 // ---------- move footer to bottom ---------------------------------
 
   $('#footer').appendTo('#page');
-
 
 // ---------- "show more" toggle ------------------------------------
 
