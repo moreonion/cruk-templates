@@ -2037,3 +2037,76 @@ ul.share-links .twitter span.icon {
     padding-right: 1.5rem;
   }
 }
+/* styles shipped with actionpanel */
+.actionpanel-widget {
+  width: 100%;
+  padding: 1.5em;
+}
+.actionpanel-widget,
+.actionpanel-widget div,
+.actionpanel-widget ul,
+.actionpanel-widget span,
+.actionpanel-widget li {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+.actionpanel-widget-supporters {
+  /* placeholder flag for unknown country */
+}
+.actionpanel-widget-supporters ul.actionpanel-widget-supporters-recent-supporters {
+  list-style: none;
+}
+.actionpanel-widget-supporters .actionpanel-widget-supporters-supporter {
+  position: relative;
+  border-bottom: 1px solid #e3e3e3;
+  padding: 0.25em 0 0.75em;
+  margin-bottom: 0.5em;
+}
+.actionpanel-widget-supporters .actionpanel-widget-supporters-supporter:first-child {
+  border-top: 1px solid #e3e3e3;
+  padding-top: 0.75em;
+}
+.actionpanel-widget-supporters .actionpanel-widget-supporters-name {
+  font-weight: bold;
+  color: #e91e62;
+}
+.actionpanel-widget-supporters .actionpanel-widget-supporters-time {
+  font-style: italic;
+  color: #b0b0b0;
+  position: absolute;
+  display: block;
+  right: 0;
+  bottom: 0.5em;
+  font-size: 0.6em;
+}
+.actionpanel-widget-supporters .actionpanel-widget-supporters-flag {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -0.25em;
+  margin-right: 16px;
+  overflow: hidden;
+  text-indent: -99999px;
+  /* hide text */
+}
+.actionpanel-widget-supporters .actionpanel-widget-supporters-no-cc::before {
+  display: block;
+  content: "?";
+  width: 30px;
+  height: 21px;
+  margin-top: 5px;
+  font-size: 16px;
+  line-height: 23px;
+  text-align: center;
+  color: #515151;
+  background-color: #d0d0d0;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  text-indent: 0;
+}
