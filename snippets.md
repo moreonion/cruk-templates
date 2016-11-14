@@ -60,7 +60,7 @@ The big headline should be a "Heading 1". It's blue by default, but any part of 
 </div>
 ```
 
-The `info-toggle` element enables the "show more info" logic. A click on the toggle shows the element with the id `background-info`.
+The `info-toggle` element enables the "show more info" logic. A click on the toggle shows the target element, which has the id referenced in the toggles `href`-attribute: in this example `background-info`.
 
 ## videos
 
