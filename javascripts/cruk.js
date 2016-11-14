@@ -53,17 +53,19 @@ $(document).ready(function(){
 
 // ---------- "show more" toggle ------------------------------------
 
-  var $toggle =  $('.info-toggle');
-  var $target =  $($toggle.attr('href'));
+  $('.info-toggle').each(function(){
+    var $toggle = $(this);
+    var $target = $($toggle.attr('href'));
 
-  if ($toggle.is(':visible') && $target.length) {
-    $target.css('display', 'none');
-    $toggle.on('click', function(e) {
-      $target.slideDown();
-      $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
-      e.preventDefault();
-    });
-  }
+    if ($toggle.is(':visible') && $target.length) {
+      $target.css('display', 'none');
+      $toggle.on('click', function(e) {
+        $target.slideDown();
+        $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+        e.preventDefault();
+      });
+    }
+  })
 
 // ---------- fancy forms -------------------------------------------
 
